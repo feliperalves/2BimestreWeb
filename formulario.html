@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formulário da Aula</title>
+  </head>
+  <body>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Contato</legend>
+        <input type="text" name="nome" id="nome" placeholder="José" required/>
+        <br /><br />
+        <input type="email" name="email" id="email" placeholder="jose@jose.com.br" required/>
+        <br /><br />
+        <input type="radio" name="sexo" value="masculino">Masculino</input>
+        <input type="radio" name="sexo" value="feminino">Feminino</input> 
+        <br /><br />
+        <label for="estados">Estado/Cidade</label>
+        <select name="Estado" id="estado" required>
+          <option value="MG">MG</option>
+          <option value="RJ">RJ</option>
+          <option value="SP">SP</option>
+        </select>
+        <input type="text" name="estado" id="estado" required />
+        <br /><br />
+        <label for = "arquivo">Selecione um arquivo</label>
+        <input type="file" name="arquivo[]" multiple required />
+        <br /> <br />
+        <label for="mensagem">Sugestão</label><br><br>
+        <textarea name="mensagem"></textarea> <br><br>
+        <button type="submit"><img src="./img/download.jpeg" alt = "Enviar"></button>
+      </fieldset>
+      <br />
+    </form>
+  </body>
+</html>
