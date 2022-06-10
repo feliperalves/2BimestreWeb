@@ -11,5 +11,83 @@ table tr td{
 }
 table{
     margin-bottom: 1rem;
-
 }
+nav input#menu-toggle{
+    display: none;
+}
+
+@media (max-width: 575px) {
+    nav{
+        position: fixed;
+        margin-top: 1rem;
+}
+    nav ul {
+    display: none;
+    background-color: #fff;
+}
+    nav ul li{
+    text-align: left;
+    margin: 1rem;
+}
+nav label[for="menu-toggle"] {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+nav label[for="menu-toggle"] div.menu-hamburguer {
+    border: 1px solid #fff;
+    width:35px;
+    height: 15px;
+    margin: 15px 2px 5px 5px;
+    cursor:pointer;
+}
+nav label[for="menu-toggle"] div.menu-hamburguer span.hamburguer{
+    position: relative;
+    display: block;
+    background-color: black;
+    width: 30px;
+    height: 2px;
+}
+nav label[for="menu-toggle"]
+ div.menu-hamburguer span.hamburguer:before,
+nav label[for="menu-toggle"] div.menu-hamburguer span.hamburguer::after{
+    position: absolute;
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+nav label[for=menu-toggle] div.menu-hamburguer span.hamburguer:before{
+    top: -10px
+}
+nav label[for=menu-toggle] div.menu-hamburguer span.hamburguer:before{
+    bottom: -10px
+}
+nav input:checked ~ ul{
+    display: block;
+    animation: fade-in 1s;
+}
+nav
+    input:checked
+    ~ label[for="menu-toggle"]
+    div.menu-hamburguer
+    span.hamburguer{
+    transform: rotate(45deg);
+    transition 0.5s;
+}
+nav
+    input:checked
+    ~ label[for="menu-toggle"]
+    div.menu-hamburguer
+    span.hamburguer:before,
+nav
+    input:checked
+    ~ label[for="menu-toggle"]
+    div.menu-hamburguer
+    span.hamburguer:before,
+nav
+    input:checked
+    ~ label[for="menu-toggle"]
+    div.menu-hamburguer
+    span.hamburguer:after
